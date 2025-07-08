@@ -1,0 +1,42 @@
+
+
+export let Config = {
+    "category" : "", //32982;gta;27471;minecraft
+    "titleToCheck" : "",
+    "clientId" : "magcfm9155x67mc5tcfud1larpcmnd",
+    "clientSecret" : "49txcolcipub83gvk6a4pyqxls02rp",
+    "users" : [
+        "miraipanda_",
+        "colfeo_",
+        "hookibibi",
+        "kc_ohio",
+        "5dcaster",
+        "uki__yo",
+        "Naelytetv",
+        "shilderi",
+        "Encoretoisnake",
+        "Aurryuken",
+        "adele_th",
+        "YaBoiMonik",
+        "Usm_deadop",
+        "kosuke",
+        "Myinana",
+        "schoolofbou",
+        "Yuumeih",
+        "pi0rbal_",
+        "Crizis_Hargo",
+        "ArtemisWl_",
+        "lowhy_lol",
+        "FreedomsHostage",
+        "kyussey",
+        "diane____",
+        "starrk__tv",
+        "TwinJetNebula",
+        "DetectiveMaxLaite_Ware",
+        "scailzzz",
+        "Konzendooji"
+    ]
+
+}
+
+
