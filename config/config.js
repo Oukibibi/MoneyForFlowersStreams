@@ -34,7 +34,14 @@ export let Config = {
         "TwinJetNebula",
         "DetectiveMaxLaite_Ware",
         "scailzzz",
-        "Konzendooji"
+        "Konzendooji",
+        "LaZerLZ",
+        "LilouMuloup",
+        "ZykRuk",
+        "leyasupls",
+        "feurret",
+        "RevealUrLove",
+        "runike_"
     ]
 
 }
