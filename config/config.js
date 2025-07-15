@@ -32,7 +32,7 @@ export let Config = {
         "diane____",
         "starrk__tv",
         "TwinJetNebula",
-        "DetectiveMaxLaite_Ware",
+        "MaxLaite",
         "scailzzz",
         "Konzendooji",
         "LaZerLZ",

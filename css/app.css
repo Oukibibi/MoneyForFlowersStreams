@@ -176,6 +176,15 @@ summary {
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 }
 
+.description a {
+  color: white;
+  text-decoration: underline;
+}
+
+.description a:hover {
+  color: lightblue;
+}
+
 .thumbnail 
 {
   width: 250px;
