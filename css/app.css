@@ -70,7 +70,7 @@ h3.title-caption {
 }
 
 summary {
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
 }
 
@@ -122,8 +122,13 @@ summary {
 }
 
 .colorWhite {
+  font-size: 18px;
   font-family: "Bebas Neue", Arial, Helvetica, sans-serif;
   color: white;
+}
+
+.colorWhite:hover {
+  color: lightblue;
 }
 
 .cellStream {

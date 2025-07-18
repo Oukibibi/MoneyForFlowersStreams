@@ -12,7 +12,7 @@ export let Config = {
         "kc_ohio",
         "5dcaster",
         "uki__yo",
-        "Naelytetv",
+        "Naelyetv",
         "shilderi",
         "Encoretoisnake",
         "Aurryuken",
@@ -41,7 +41,11 @@ export let Config = {
         "leyasupls",
         "feurret",
         "RevealUrLove",
-        "runike_"
+        "runike_",
+        "sigismundd",
+        "Opex0707",
+        "exareyn",
+        "frannouche_"
     ]
 
 }
