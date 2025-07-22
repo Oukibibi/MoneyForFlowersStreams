@@ -53,7 +53,8 @@ export let Config = {
         "xalomon_",
         "NakaStream",
         "Atreiidys",
-        "salamanderesport"
+        "salamanderesport",
+        "Exeloh"
     ]
 
 }
