@@ -44,7 +44,7 @@ export let Config = {
         "runike_",
         "sigismundd",
         "Opex0707",
-        "exareyn",
+        "exarayn",
         "frannouche_",
         "Celest0z",
         "Fehrteen_one",
