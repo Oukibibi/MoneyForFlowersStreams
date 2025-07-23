@@ -7,7 +7,6 @@ export let Config = {
     "clientSecret" : "49txcolcipub83gvk6a4pyqxls02rp",
     "users" : [
         "miraipanda_",
-        "colfeo_",
         "hookibibi",
         "kc_ohio",
         "5dcaster",
