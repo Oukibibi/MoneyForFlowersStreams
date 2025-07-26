@@ -57,7 +57,9 @@ export let Config = {
         "lolskiddo_",
         "Mitsuan",
         "Voxioo",
-        "PetrichorLIVE"
+        "PetrichorLIVE",
+        "tpk_live",
+        "apsaphea"
     ]
 
 }
