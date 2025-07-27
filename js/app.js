@@ -20,42 +20,44 @@ xhr.onreadystatechange = function () {
         // var url = "https://api.twitch.tv/helix/search/channels?query=Destroyer&live_only=true";
         // var url = "https://api.twitch.tv/helix/streams?query=IronPaper";
         var userLoginString = '';
-        Config.users.forEach(user => {
-            userLoginString += 'user_login='+user+'&'
-        });
+        // Config.users.forEach(user => {
+        //     userLoginString += 'user_login='+user+'&'
+        // });
         // var url = "https://api.twitch.tv/helix/streams?game_id=" + Config.category + "&language=fr&"+userLoginString;
         var url = "https://api.twitch.tv/helix/streams?"+userLoginString;
+        
+        displayNoStream();
 
-        var xhrRequest = new XMLHttpRequest();
-        xhrRequest.open("GET", url);
-        xhrRequest.setRequestHeader('Authorization', 'Bearer ' + bearer);
-        xhrRequest.setRequestHeader('Client-Id', clientId);
-        xhrRequest.onreadystatechange = function () {
-            if (xhrRequest.readyState === 4) {
-                var responseJson = JSON.parse(xhrRequest.responseText);
-                //responseJson.data = [];
-                if(responseJson.data.length === 0)
-                {
-                    displayNoStream();
-                }
-                else{
-                    document.getElementById('twitch-channels-content').innerHTML = '';
-                    var countViewer = 0;
-                    responseJson.data.forEach(element => {
-                        if(element.title.toUpperCase().includes(Config.titleToCheck))
-                        {
-                            countViewer += (element.viewer_count ?? 0);
-                        }
-                        displayThumnail(element);
-                    });
-                    document.getElementById('viewerCount').innerHTML = "Les streams Money for Flowers : " + (countViewer == 1 ? countViewer + " spectateur" : countViewer + " spectateurs");
-                    if(document.getElementById('twitch-channels-content').innerHTML.length === 0){
-                        displayNoStream()
-                    }
-                }
-                AutoRefresh(300000);
-            }
-        };
+        // var xhrRequest = new XMLHttpRequest();
+        // xhrRequest.open("GET", url);
+        // xhrRequest.setRequestHeader('Authorization', 'Bearer ' + bearer);
+        // xhrRequest.setRequestHeader('Client-Id', clientId);
+        // xhrRequest.onreadystatechange = function () {
+        //     if (xhrRequest.readyState === 4) {
+        //         var responseJson = JSON.parse(xhrRequest.responseText);
+        //         //responseJson.data = [];
+        //         if(responseJson.data.length === 0)
+        //         {
+        //             displayNoStream();
+        //         }
+        //         else{
+        //             document.getElementById('twitch-channels-content').innerHTML = '';
+        //             var countViewer = 0;
+        //             responseJson.data.forEach(element => {
+        //                 if(element.title.toUpperCase().includes(Config.titleToCheck))
+        //                 {
+        //                     countViewer += (element.viewer_count ?? 0);
+        //                 }
+        //                 displayThumnail(element);
+        //             });
+        //             document.getElementById('viewerCount').innerHTML = "Les streams Money for Flowers : " + (countViewer == 1 ? countViewer + " spectateur" : countViewer + " spectateurs");
+        //             if(document.getElementById('twitch-channels-content').innerHTML.length === 0){
+        //                 displayNoStream()
+        //             }
+        //         }
+        //         AutoRefresh(300000);
+        //     }
+        // };
 
         xhrRequest.send();
         //list-channels
@@ -84,63 +86,13 @@ function displayThumnail(element) {
 
 function reloadXHR()
 {
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", url);
-    document.getElementById('twitch-channels-content').innerHTML = "<div class='loader'>Chargement...</div>";
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4) {
-            var responseJson = JSON.parse(xhr.responseText);
-            var bearer = responseJson.access_token;
     
-            // var url = "https://api.twitch.tv/helix/search/channels?query=Destroyer&live_only=true";
-            // var url = "https://api.twitch.tv/helix/streams?query=IronPaper";
-            var userLoginString = '';
-            Config.users.forEach(user => {
-                userLoginString += 'user_login='+user+'&'
-            });
-            var url = "https://api.twitch.tv/helix/streams?"+userLoginString;
-    
-            var xhrRequest = new XMLHttpRequest();
-            xhrRequest.open("GET", url);
-            xhrRequest.setRequestHeader('Authorization', 'Bearer ' + bearer);
-            xhrRequest.setRequestHeader('Client-Id', clientId);
-            xhrRequest.onreadystatechange = function () {
-                if (xhrRequest.readyState === 4) {
-                    var responseJson = JSON.parse(xhrRequest.responseText);
-                    //responseJson.data = [];
-                    if(responseJson.data.length === 0)
-                    {
-                        displayNoStream();
-                    }
-                    else{
-                        document.getElementById('twitch-channels-content').innerHTML = '';
-                        var countViewer = 0;
-                        responseJson.data.forEach(element => {
-                            
-                            if(element.title.toUpperCase().includes(Config.titleToCheck))
-                            {
-                                countViewer += (element.viewer_count ?? 0);
-                            }
-                            displayThumnail(element);
-                        });
-                        document.getElementById('viewerCount').innerHTML = "Les streams Money for Flowers : " + (countViewer == 1 ? countViewer + " spectateur" : countViewer + " spectateurs");
-                        if(document.getElementById('twitch-channels-content').innerHTML.length === 0){
-                            displayNoStream()
-                        }
-                    }
-                    AutoRefresh(300000);
-                }
-            };
-    
-            xhrRequest.send();
-        }
-    };
-    xhr.send();
+        displayNoStream();
 }
 
 function displayNoStream()
 {
-    document.getElementById('twitch-channels-content').innerHTML = "<div class='blockNoLive'><p>Aucun stream actuellement, reviens un peu plus tard</p><img src='./img/MFF25flower_pink.png' class='flower row'/><br /></div>";
+    document.getElementById('twitch-channels-content').innerHTML = "<div class='blockNoLive'><p>C'est fini. See you next time. Merci pour tout ♥</p><img src='./img/MFF_AFFICHES_9.png' class='flower row'/><br /></div>";
 }
 
 function AutoRefresh( t ) {
